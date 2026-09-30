@@ -1,0 +1,174 @@
+SIPES
+│
+├── app/
+│   │
+│   ├── Http/
+│   │   │
+│   │   ├── Controllers/
+│   │   │   │
+│   │   │   ├── Auth/
+│   │   │   │   ├── ControllerAuthAdmin.php
+│   │   │   │   ├── ControllerAuthPetugas.php
+│   │   │   │   └── ControllerAuthSatuanPendidikan.php
+│   │   │   │
+│   │   │   ├── Dashboard/
+│   │   │   │   ├── ControllerDashboardAdmin.php
+│   │   │   │   ├── ControllerDashboardPetugas.php
+│   │   │   │   └── ControllerDashboardSatuanPendidikan.php
+│   │   │   │
+│   │   │   ├── Master/
+│   │   │   │   ├── ControllerUser.php
+│   │   │   │   └── ControllerSatuanPendidikan.php
+│   │   │   │
+│   │   │   ├── MasaBerlaku/
+│   │   │   │   ├── ControllerMasaBerlaku.php
+│   │   │   │   └── ControllerPerpanjangan.php
+│   │   │   │
+│   │   │   ├── Notifikasi/
+│   │   │   │   ├── ControllerNotifikasi.php
+│   │   │   │   └── ControllerRiwayatNotifikasi.php
+│   │   │   │
+│   │   │   ├── Laporan/
+│   │   │   │   ├── ControllerLaporan.php
+│   │   │   │   ├── ControllerLaporanMasaBerlaku.php
+│   │   │   │   ├── ControllerLaporanSatuanPendidikan.php
+│   │   │   │   └── ControllerLaporanNotifikasi.php
+│   │   │   │
+│   │   │   ├── Profil/
+│   │   │   │   └── ControllerProfil.php
+│   │   │   │
+│   │   │   └── Landing/
+│   │   │       └── ControllerLanding.php
+│   │   │
+│   │   └── Middleware/
+│   │       ├── MiddlewareAdmin.php
+│   │       ├── MiddlewarePetugas.php
+│   │       └── MiddlewareSatuanPendidikan.php
+│   │
+│   ├── Models/
+│   │   ├── ModelUser.php
+│   │   ├── ModelSatuanPendidikan.php
+│   │   ├── ModelRiwayatMasaBerlaku.php
+│   │   └── ModelRiwayatNotifikasi.php
+│   │
+│   └── Services/
+│       ├── MasaBerlakuService.php
+│       ├── NotifikasiService.php
+│       ├── LaporanService.php
+│       └── CetakLaporanService.php
+│
+├── database/
+│   │
+│   ├── migrations/
+│   │   └── create_sipes_tables.php
+│   │
+│   └── seeders/
+│       ├── DatabaseSeeder.php
+│       └── namaseederssipes.php
+│
+├── resources/
+│   │
+│   └── views/
+│       │
+│       ├── layouts/
+│       │   ├── admin.blade.php
+│       │   ├── petugas.blade.php
+│       │   └── satuanpendidikan.blade.php
+│       │
+│       ├── landing/
+│       │   └── index.blade.php
+│       │
+│       ├── auth/
+│       │   ├── loginadmin.blade.php
+│       │   ├── loginpetugas.blade.php
+│       │   └── loginnpsn.blade.php
+│       │
+│       ├── admin/
+│       │   │
+│       │   ├── dashboard.blade.php
+│       │   │
+│       │   ├── user/
+│       │   │   ├── index.blade.php
+│       │   │   ├── create.blade.php
+│       │   │   ├── edit.blade.php
+│       │   │   └── show.blade.php
+│       │   │
+│       │   ├── satuanpendidikan/
+│       │   │   ├── index.blade.php
+│       │   │   ├── create.blade.php
+│       │   │   ├── edit.blade.php
+│       │   │   ├── show.blade.php
+│       │   │   └── import.blade.php
+│       │   │
+│       │   ├── masaberlaku/
+│       │   │   ├── index.blade.php
+│       │   │   ├── show.blade.php
+│       │   │   └── perpanjangan.blade.php
+│       │   │
+│       │   ├── notifikasi/
+│       │   │   ├── index.blade.php
+│       │   │   └── show.blade.php
+│       │   │
+│       │   ├── laporan/
+│       │   │   ├── index.blade.php
+│       │   │   ├── masaberlaku.blade.php
+│       │   │   ├── satuanpendidikan.blade.php
+│       │   │   └── notifikasi.blade.php
+│       │   │
+│       │   └── profil/
+│       │       └── index.blade.php
+│       │
+│       ├── petugas/
+│       │   │
+│       │   ├── dashboard.blade.php
+│       │   │
+│       │   ├── satuanpendidikan/
+│       │   │   ├── index.blade.php
+│       │   │   └── show.blade.php
+│       │   │
+│       │   ├── masaberlaku/
+│       │   │   ├── index.blade.php
+│       │   │   ├── show.blade.php
+│       │   │   └── perpanjangan.blade.php
+│       │   │
+│       │   ├── notifikasi/
+│       │   │   ├── index.blade.php
+│       │   │   └── show.blade.php
+│       │   │
+│       │   ├── laporan/
+│       │   │   ├── index.blade.php
+│       │   │   └── masaberlaku.blade.php
+│       │   │
+│       │   └── profil/
+│       │       └── index.blade.php
+│       │
+│       ├── satuanpendidikan/
+│       │   │
+│       │   ├── dashboard.blade.php
+│       │   ├── profil.blade.php
+│       │   ├── masaberlaku.blade.php
+│       │   ├── riwayat.blade.php
+│       │   └── notifikasi.blade.php
+│       │
+│       └── errors/
+│           ├── 403.blade.php
+│           ├── 404.blade.php
+│           └── 500.blade.php
+│
+├── routes/
+│   ├── web.php
+│   └── console.php
+│
+├── public/
+│   ├── css/
+│   │   └── sipes.css
+│   ├── js/
+│   │   └── sipes.js
+│   └── images/
+│
+├── storage/
+│
+├── .env
+├── artisan
+├── composer.json
+└── package.json
